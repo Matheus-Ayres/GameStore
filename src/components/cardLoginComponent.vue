@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { login } from '../store';
 
 const openEye = "/src/assets/icons/open.png";
 const closedEye = "/src/assets/icons/closed.png";
@@ -12,6 +13,7 @@ const router = useRouter();
 // fictitious user login data
 const userLogin = ref("user123");
 const userPassword = ref("batata");
+
 
 // holder user data
 const user = ref("");
@@ -29,6 +31,7 @@ function seePassword() {
 
 function submitLogin() {
     if (user.value === userLogin.value && password.value === userPassword.value) {
+        login()
         router.push('/');
     } else {
         alert("Usuário ou senha incorretos!.");

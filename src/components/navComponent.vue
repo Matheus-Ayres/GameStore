@@ -1,3 +1,12 @@
+<script setup>
+import { ref } from 'vue';
+import { isLogged } from '../store';
+
+const profileHover = ref(false);
+const cartHover = ref(false);
+
+</script>
+
 <template>
     <nav class="bg-red-600 p-5">
         <div class="container mx-auto">
@@ -9,11 +18,24 @@
                     </div>
                 </router-link>
                 <div class="flex justify-center items-center space-x-4">
-                    <router-link to="/loginPage">
-                        <img src="/src/assets/icons/user.png" class= "h-8 w-8" alt="User Icon">
+                    
+                    <span v-if="profileHover" class="text-white">
+                        Meu Perfil
+                    </span>
+                    <router-link to="/profilePage">
+                        <img src="/src/assets/icons/user.png" @mouseenter="profileHover = true" @mouseleave="profileHover = false" 
+                        class="h-8 w-8" alt="User Icon">
                     </router-link>
-                    <img src="/src/assets/icons/cart.png" class= "h-8 w-8 " alt="Cart Icon">
-                    <img src="/src/assets/icons/menu.png" class= "h-8 w-8" alt="Menu Icon">
+
+                    <span v-if="cartHover" class="text-white">
+                        Meu Carrinho
+                    </span>
+
+                    <router-link to="/cartPage">
+                        <img src="/src/assets/icons/cart.png" @mouseenter="cartHover = true" @mouseleave="cartHover = false"
+                        class="h-8 w-8 " alt="Cart Icon">
+                    </router-link>
+                    <img src="/src/assets/icons/menu.png" class="h-8 w-8" alt="Menu Icon">
                 </div>
             </div>
         </div>
