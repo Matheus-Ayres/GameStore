@@ -4,26 +4,36 @@ import UserInfosComponent from './userInfosComponent.vue';
 </script>
 
 <template>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 m-10 bg-gray-100 p-10 rounded-2xl">
+    <div class="grid grid-cols-1 max-sm:grid-cols-2 max-sm:m-1 max-sm:mt-20 mt-20 p-5 sm:grid-cols-2 lg:grid-cols-2 gap-10 m-10 bg-gray-100 p-10 rounded-2xl">
         <UserInfosComponent
             image="/src/assets/icons/orders.png"
             title="Meus Pedidos"
-            description="Rastrear, devolver ou comprar novamente"
+            description="Rastrear, devolver ou comprar novamente."
         />
         <UserInfosComponent
             image="/src/assets/icons/adress.png"
             title="Meus Endereços"
-            description="Visualizar, alterar ou adicionar novos endereços de entrega    "
+            description="Visualizar, alterar ou adicionar novos endereços de entrega."
         />
         <UserInfosComponent
             image="/src/assets/icons/paycard.png"
-            title="Meus Pedidos"
-            description="Rastrear, devolver ou comprar novamente"
+            title="Formas de Pagamento"
+            description="Gerenciar cartões de crédito e débito salvos."
         />
         <UserInfosComponent
-            image="/src/assets/icons/orders.png"
-            title="Meus Pedidos"
-            description="Rastrear, devolver ou comprar novamente"
+            image="/src/assets/icons/shield.png"
+            title="Segurança"
+            description="Gerenciar senhas, e-mail e número de telefone."
+        />
+        <UserInfosComponent
+            image="/src/assets/icons/headphone.png"
+            title="Atendimento"
+            description="Suporte e atendimento ao cliente."
+        />
+        <UserInfosComponent
+            image="/src/assets/icons/coin.png"
+            title="Saldo e Resgates"
+            description="Ver saldo ou resgatar boletos e PIX."
         />
     </div>
 </template>
