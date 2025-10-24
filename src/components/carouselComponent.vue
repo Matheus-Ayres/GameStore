@@ -31,8 +31,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="relative w-full max-w-xl mx-auto overflow-hidden rounded-2xl shadow-lg">
-        <div class="transition-all duration-700">
+    <div class="relative w-xl max-w-xl h-full mx-auto overflow-hidden rounded-2xl shadow-lg">
+        <div class="transition-all max-h-[30vh] duration-700">
             <img :src="currentSlide.img" alt="slide">
             <div class="absolute inset-0 bg-black/20 flex items-end">
                 <p class="text-white text-xl p-4 font-semibold">{{ currentSlide.text }}</p>

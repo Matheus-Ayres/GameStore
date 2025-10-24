@@ -7,7 +7,7 @@ const cartHover = ref(false);
 </script>
 
 <template>
-    <nav class="bg-red-600 p-5 relative">
+    <nav class="bg-red-700 p-5 relative">
         <div class="container mx-auto">
             <div class="flex justify-between items-center relative">
                 <!-- Logo -->

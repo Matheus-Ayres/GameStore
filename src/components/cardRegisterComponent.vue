@@ -35,7 +35,7 @@ function submitLogin() {
 </script>
 
 <template>
-    <form class="bg-blue-900 w-full max-w-md mx-auto p-6 rounded-2xl flex flex-col justify-center shadow-2xl"
+    <form class="bg-blue-800  p-6 rounded-2xl flex flex-col justify-center shadow-2xl"
         @submit.prevent="submitLogin">
         <h1 class="text-center text-white font-bold text-2xl mb-8">REGISTRAR</h1>
 

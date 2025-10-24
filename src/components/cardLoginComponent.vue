@@ -40,19 +40,19 @@ function submitLogin() {
 </script>
 
 <template>
-    <form class="bg-red-600 w-full max-w-md p-6 rounded-2xl flex flex-col justify-center shadow-2xl"
+    <form class="bg-red-700 w-full max-w-md p-5 rounded-2xl flex flex-col justify-center shadow-2xl"
         @submit.prevent="submitLogin">
         <h1 class="text-center text-white font-bold text-2xl mb-8">LOGIN</h1>
 
         <div>
-            <!-- Usuário -->
+            
             <div class="flex flex-col">
                 <label class="text-white font-semibold">USER</label>
                 <input type="text" class="w-full p-2 rounded-lg mt-2 mb-5"
                     placeholder="Coloque seu usuário" required v-model="user" />
             </div>
 
-            <!-- Senha -->
+            
             <div class="flex flex-col">
                 <label class="text-white font-semibold">SENHA</label>
                 <input :type="visibleState" class="w-full p-2 rounded-md mt-2 mb-1"
@@ -72,7 +72,6 @@ function submitLogin() {
                 </div>
             </div>
 
-            <!-- Botão -->
             <div class="flex justify-center mt-8">
                 <button class="bg-white text-black font-bold px-10 py-2 rounded-lg border-2 border-transparent 
                     hover:bg-red-800 hover:border-white hover:text-white transition duration-300">
@@ -80,7 +79,6 @@ function submitLogin() {
                 </button>
             </div>
 
-            <!-- Cadastro -->
             <div class="flex flex-col items-center space-y-2 mt-6">
                 <span class="text-white font-semibold">Não possui uma conta?</span>
                 <router-link to="/registerPage">
