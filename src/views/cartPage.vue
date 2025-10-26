@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavBar from '../components/navComponent.vue';
-import CartItem from '../components/itemComponent.vue';
+import CartItem from '../components/itemInCartComponent.vue';
 
 </script>
 

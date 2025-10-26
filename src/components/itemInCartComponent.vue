@@ -9,6 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
+    
     <div class="flex items-center bg-gray-50 rounded-lg p-4 shadow-sm">
         <img class="w-24 h-auto rounded-md mr-4" :src="image"
             alt="Xbox Series X">

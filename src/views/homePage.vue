@@ -1,6 +1,7 @@
 <script setup>
 import NavComponent from '../components/navComponent.vue';
 import PriceOffComponent from '../components/priceOffComponent.vue';
+import ProductsInHomeComponent from '../components/productsInHomeComponent.vue';
 
 </script>
 
@@ -8,4 +9,5 @@ import PriceOffComponent from '../components/priceOffComponent.vue';
   <NavComponent />
   
   <PriceOffComponent />
+  <ProductsInHomeComponent/>
 </template>
