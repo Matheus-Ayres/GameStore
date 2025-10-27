@@ -33,7 +33,9 @@ onMounted(() => {
 <template>
     <div class="relative max-w-xl h-full  overflow-hidden rounded-t-2xl shadow-lg
             md:rounded-2xl">
-        <div class="transition-all max-h-[30vh] duration-700">
+        <div class="transition-all max-h-[20vh] duration-700
+            md:max-h-[40vh]
+            ">
             <img :src="currentSlide.img" alt="slide">
             <div class="absolute inset-0 bg-black/30 flex items-end">
                 <p class="text-white text-xl p-2 font-semibold bg-black/20 rounded-2xl w-[45%]">{{ currentSlide.text }}</p>
