@@ -4,7 +4,7 @@ import UserInfosComponent from './userInfosComponent.vue';
 </script>
 
 <template>
-    <div class="grid grid-cols-1 max-sm:grid-cols-2 max-sm:m-1 max-sm:mt-20 mt-20 p-5 sm:grid-cols-2 lg:grid-cols-2 gap-10 m-10 bg-gray-100 p-10 rounded-2xl">
+    <div class="grid md:grid-cols-2 gap-10 m-10 bg-gray-100 p-10 rounded-2xl">
         <UserInfosComponent
             image="/src/assets/icons/orders.png"
             title="Meus Pedidos"

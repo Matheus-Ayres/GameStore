@@ -1,24 +1,24 @@
 <script setup>
 import CardProductComponent from './cardProductComponent.vue';
+import CategoriesComponent from './categoriesComponent.vue';
+import CategoriesMobileComponent from './categoriesMobileComponent.vue';
 
 
 </script>
 
 <template>
-    <main class=" m-20
-        md:grid md:grid-cols-[25%_75%] md:gap-10 md:m-10
-        ">
-        <section class="hidden md:block bg-red-700 p-5 rounded-md text-white w-60">
-            <span class="font-bold text-2xl">Categorias (3)</span>
-            <ul class="text-xl mt-2 space-y-2 w-10">
-                <li class="cursor-pointer font-semibold hover:underline">Todos</li>
-                <li class="cursor-pointer hover:underline">Consoles</li>
-                <li class="cursor-pointer hover:underline">Jogos</li>
-                <li class="cursor-pointer hover:underline">Periféricos</li>
-            </ul>
-        </section>
+    <main class="md:grid md:grid-cols-[25%_75%] md:gap-10 md:m-10">
+        <section>
+            <div class="hidden md:block bg-red-700 p-5 rounded-md text-white w-60">
+                <CategoriesComponent/>
+            </div>
+            <div class=" bg-red-700 p-5 mt-2 text-white w-full mb-10 
+            md:hidden" >
+            <CategoriesMobileComponent />
+        </div>
+    </section>
 
-        <section class="flex flex-col gap-10  
+        <section class="flex flex-col gap-10 m-20 mt-1
             md:grid md:grid-cols-3 ">
             <CardProductComponent
                 image="/src/assets/icons/crash.jpg"
