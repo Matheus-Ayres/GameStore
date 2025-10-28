@@ -13,10 +13,10 @@ import CategoriesMobileComponent from './categoriesMobileComponent.vue';
                 <CategoriesComponent/>
             </div>
             <div class=" bg-red-700 p-5 mt-2 text-white w-full mb-10 
-            md:hidden" >
-            <CategoriesMobileComponent />
-        </div>
-    </section>
+                md:hidden" >
+                <CategoriesMobileComponent />
+            </div>
+        </section>
 
         <section class="flex flex-col gap-10 m-20 mt-1
             md:grid md:grid-cols-3 ">

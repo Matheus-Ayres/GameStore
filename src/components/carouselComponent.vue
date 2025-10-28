@@ -31,7 +31,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="relative max-w-xl h-full  overflow-hidden rounded-t-2xl shadow-lg
+    <div class="relative max-w-xl h-full  overflow-hidden rounded-t-2xl shadow-lg cursor-pointer
             md:rounded-2xl">
         <div class="transition-all max-h-[20vh] duration-700
             md:max-h-[40vh]

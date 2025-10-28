@@ -4,7 +4,7 @@ import NavBar from '../components/navComponent.vue';
 </script>
 
 <template>
-    <NavBar />
+    <NavBar visible="hidden"/>
 
     <main class="relative flex justify-center items-center h-[95vh] bg-cover bg-center bg-no-repeat"
         style="background-image: url('/src/assets/icons/mario.jpeg')">

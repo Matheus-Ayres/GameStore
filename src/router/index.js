@@ -4,6 +4,7 @@ import LoginPage from '../views/loginPage.vue';
 import ResgisterPage from '../views/resgisterPage.vue';
 import CartPage from '../views/cartPage.vue';
 import ProfilePage from '../views/profilePage.vue';
+import ProductPage from '../views/productPage.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
             path: '/profilePage',
             name: 'profilePage',
             component: ProfilePage
+        },
+        {
+            path: '/productPage',
+            name: 'productPage',
+            component: ProductPage
         }
     ],
 })
