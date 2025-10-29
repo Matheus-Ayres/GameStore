@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { createUser } from '../store';
 
 const openEye = "/src/assets/icons/open.png";
 const closedEye = "/src/assets/icons/closed.png";
@@ -24,10 +25,10 @@ function seePassword() {
     }
 }
 
-function submitLogin() {
+function submitResgister() {
     if (password.value === confirmPassword.value) {
-        alert("Registro efetuado!");
-        router.push('/');
+        createUser(user.value, password.value);
+        router.push('/loginPage');
     } else {
         alert("As senhas devem ser iguais!");
     }
@@ -36,7 +37,7 @@ function submitLogin() {
 
 <template>
     <form class="bg-blue-800  p-6 rounded-2xl flex flex-col justify-center shadow-2xl"
-        @submit.prevent="submitLogin">
+        @submit.prevent="submitResgister">
         <h1 class="text-center text-white font-bold text-2xl mb-8">REGISTRAR</h1>
 
         <div>

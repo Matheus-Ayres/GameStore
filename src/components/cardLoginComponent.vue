@@ -10,10 +10,6 @@ const see = ref(false);
 const visibleState = ref("password");
 const router = useRouter();
 
-// fictitious user login data
-const userLogin = ref("tarcisio123");
-const userPassword = ref("dioninho");
-
 
 // holder user data
 const user = ref("");
@@ -30,12 +26,7 @@ function seePassword() {
 }
 
 function submitLogin() {
-    if (user.value === userLogin.value && password.value === userPassword.value) {
-        login()
-        router.push('/');
-    } else {
-        alert("Usuário ou senha incorretos!.");
-    }
+        login(user.value, password.value);
 }
 </script>
 
