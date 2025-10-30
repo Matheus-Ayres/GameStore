@@ -1,5 +1,13 @@
 <script setup>
+import { push } from 'notivue';
 import NavBarComponent from '../components/navComponent.vue';
+
+function addCart(){
+    push.success({
+        title: 'Produto adicionado ao carrinho!',
+        message: 'O produto foi adicionado ao seu carrinho de compras com sucesso.'
+    });
+}
 </script>
 
 <template>
@@ -23,7 +31,7 @@ import NavBarComponent from '../components/navComponent.vue';
                 </button>
                 <button
                     class="mt-3 text-red-600 font-semibold border border-red-600 px-6 py-2 rounded-lg 
-                    hover:bg-red-600 hover:text-white transition">
+                    hover:bg-red-600 hover:text-white transition" @click="addCart">
                     Adicionar ao Carrinho
                 </button>
             </section>

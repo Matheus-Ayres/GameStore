@@ -1,21 +1,7 @@
 <script setup lang="ts">
 import NavBar from '../components/navComponent.vue';
 import CartItem from '../components/itemInCartComponent.vue';
-import { ref } from 'vue';
-
-const couponCode = ref('GAMER10');
-const correctCoupon = ref();
-const inputCoupon = ref('');
-
-function applyCoupon() {
-    console.log('Aplicando cupom:', inputCoupon.value);
-    if (inputCoupon.value === couponCode.value ) {
-        console.log('Cupom aplicado com sucesso!');
-        correctCoupon.value = true;
-    } else {
-        correctCoupon.value = false;
-    }
-}
+import CouponComponent from '../components/couponComponent.vue';
 
 </script>
 
@@ -30,30 +16,17 @@ function applyCoupon() {
                 image="/src/assets/icons/crash.jpg"
                 name="Crash Bandicoot (Xbox One)" 
                 :price="199.90" 
+                :quantity="1"
             />
 
             <CartItem
                 image="/src/assets/icons/xbox.jpg"
                 name="Console Xbox Series X"
                 :price="4999.90"
+                :quantity="1"
             />
             
-            <form @submit.prevent="applyCoupon" class="mt-6">
-                <div class="coupon-area flex items-center gap-2 mt-5">
-                    <label for="cupom" class="font-bold">Cupom:</label>
-                    <input v-model="inputCoupon" type="text" id="cupom" placeholder="Digite seu cupom"
-                    class="flex-1 p-2 border border-gray-300 rounded-md">
-                <button type="submit" class="apply bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors">
-                    Aplicar
-                </button>
-                </div>
-            </form>
-            <span v-if="correctCoupon" class=" text-green-600 font-semibold">
-                Cupom aplicado: <strong>GAMER10</strong> - Desconto de 10%
-            </span>
-            <span v-if="correctCoupon == false" class="text-red-800 font-semibold">
-                Cupom  inválido
-            </span>
+            <CouponComponent />
             
             <div class="total-area flex justify-between items-center mt-6 text-lg">
                 <p><strong>Total:</strong> R$ 5.199,80</p>
