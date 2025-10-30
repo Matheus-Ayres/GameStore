@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import TrashComponent from './trashComponent.vue';
 
 
 const props = defineProps({
@@ -34,8 +35,9 @@ function decrementQuantity() {
                     Quantidade
                 </span>
 
-                <section class="flex items-center justify-between gap-4 mt-2 w-80">
+                <section class="flex items-center  gap-4 mt-2 w-80">
                     <div class="flex items-center gap-3">
+                        <TrashComponent/>
                         <div class="bg-red-600 text-white font-bold px-2 py-1 rounded-l-full cursor-pointer select-none"
                             @click="decrementQuantity">
                             -
@@ -47,7 +49,6 @@ function decrementQuantity() {
                         </div>
                     </div>
 
-                    <img src="/src/assets/icons/lixoPreto.png" class="cursor-pointer" />
                 </section>
 
             </div>
