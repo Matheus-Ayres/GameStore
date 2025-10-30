@@ -1,12 +1,13 @@
 <script setup>
 import { ref } from 'vue';
+import LogoutComponent from './logoutComponent.vue';
 
 const profileHover = ref(false);
 const cartHover = ref(false);
 </script>
 
 <template>
-    <div class="flex justify-center items-center space-x-6 relative">
+    <div class="flex justify-center items-center gap-6 relative">
         <div class="relative flex items-center">
             <Transition name="slide">
                 <span v-if="profileHover" class=" text-white whitespace-nowrap">
@@ -34,7 +35,7 @@ const cartHover = ref(false);
             </router-link>
         </div>
 
-        <img src="/src/assets/icons/menu.png" class="h-8 w-8" alt="Menu Icon" />
+        <LogoutComponent/>
     </div>
 </template>
 

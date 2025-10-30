@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { createUser } from '../store';
+import { push } from 'notivue';
 
 const openEye = "/src/assets/icons/open.png";
 const closedEye = "/src/assets/icons/closed.png";
@@ -28,9 +29,12 @@ function seePassword() {
 function submitResgister() {
     if (password.value === confirmPassword.value) {
         createUser(user.value, password.value);
-        router.push('/loginPage');
+        router.push('/');
     } else {
-        alert("As senhas devem ser iguais!");
+        push.warning({
+            title: 'Falha no registro!',
+            message: `As senhas precisam ser iguais!`
+        });
     }
 }
 </script>

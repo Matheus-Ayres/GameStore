@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { login } from '../store';
+import { push } from 'notivue';
 
 const openEye = "/src/assets/icons/open.png";
 const closedEye = "/src/assets/icons/closed.png";
@@ -27,6 +28,7 @@ function seePassword() {
 
 function submitLogin() {
         login(user.value, password.value);
+        
 }
 </script>
 
